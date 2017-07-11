@@ -7,6 +7,9 @@ yum -d0 -y upgrade
 yum -y install centos-release-openshift-origin
 yum -y install origin-clients
 
+# looks like we need to stop selinux for now, with overlayfs
+setenforce 0
+
 # depending on your internet speeds, this can take a while
 oc cluster up
 
