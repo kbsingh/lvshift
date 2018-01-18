@@ -5,7 +5,7 @@
 yum -d0 -y upgrade
 
 yum -y install centos-release-openshift-origin
-yum -y install origin-clients
+yum -y install docker origin-clients
 
 # looks like we need to stop selinux for now, with overlayfs
 setenforce 0
